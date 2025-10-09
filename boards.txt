@@ -356,3 +356,42 @@ muxto.upload.maximum_size=262144
 muxto.upload.maximum_data_size=32768
 
 ##############################################################
+
+ek_ra6m5.name=Renesas EK-RA6M5 (Custom)
+ek_ra6m5.build.core=arduino
+ek_ra6m5.build.crossprefix=arm-none-eabi-
+ek_ra6m5.build.compiler_path={runtime.tools.arm-none-eabi-gcc-7-2017q4.path}/bin/
+
+ek_ra6m5.build.variant=EK_RA6M5
+ek_ra6m5.build.mcu=cortex-m33
+ek_ra6m5.build.architecture=cortex-m33
+ek_ra6m5.build.fpu=-mfpu=fpv5-sp-d16
+ek_ra6m5.build.float-abi=-mfloat-abi=hard
+
+ek_ra6m5.build.board=EK_RA6M5
+ek_ra6m5.build.defines=-DF_CPU=200000000 -DLWIP_DNS=1
+ek_ra6m5.build.extra_flags=-DARDUINO_EK_RA6M5 -DARDUINO_ARCH_RENESAS -DLWIP_DNS=1 -DCFG_TUSB_MCU=OPT_MCU_RAXXX
+
+ek_ra6m5.compiler.fsp.defines={build.variant.path}/defines.txt
+ek_ra6m5.compiler.fsp.ldflags={build.variant.path}/ldflags.txt
+ek_ra6m5.compiler.fsp.cflags=-mthumb "@{compiler.fsp.defines}" -DLWIP_DNS=1
+ek_ra6m5.compiler.fsp.cxxflags=-mthumb "@{compiler.fsp.defines}" -DLWIP_DNS=1
+ek_ra6m5.compiler.tinyusb.cflags=-DCFG_TUSB_MCU=OPT_MCU_RAXXX
+ek_ra6m5.compiler.tinyusb.cxxflags=-DCFG_TUSB_MCU=OPT_MCU_RAXXX
+ek_ra6m5.compiler.fsp.includes={build.variant.path}/includes.txt
+ek_ra6m5.compiler.fsp.extra_ldflags=-lstdc++ -lsupc++ -lm -lc -lgcc -lnosys
+ek_ra6m5.compiler.fsp="{build.variant.path}/libs/libfsp.a"
+
+ek_ra6m5.upload.tool=jlink
+ek_ra6m5.upload.tool.default=jlink
+ek_ra6m5.upload.protocol=jlink
+ek_ra6m5.upload.address=0x00010000
+ek_ra6m5.upload.native_usb=false
+ek_ra6m5.upload.maximum_size=2097152
+ek_ra6m5.upload.maximum_data_size=523624
+
+ek_ra6m5.debug.server.openocd.scripts.0=interface/{programmer.protocol}.cfg
+ek_ra6m5.debug.server.openocd.scripts.1={programmer.transport_script}
+ek_ra6m5.debug.server.openocd.scripts.2={runtime.platform.path}/debugger/R7FA6M5BH.cfg
+ek_ra6m5.debug.svd_file={runtime.platform.path}/svd/R7FA6M5BH.svd
+
