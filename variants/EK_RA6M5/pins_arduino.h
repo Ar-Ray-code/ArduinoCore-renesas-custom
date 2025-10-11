@@ -55,6 +55,8 @@ static const uint8_t A5 = PIN_A5;
 #define PIN_D11  (42u)
 #define PIN_D12  (41u)
 #define PIN_D13  (9u)
+#define PIN_D14  (37u)
+#define PIN_D15  (38u)
 
 #undef D0
 #undef D1
@@ -70,6 +72,8 @@ static const uint8_t A5 = PIN_A5;
 #undef D11
 #undef D12
 #undef D13
+#undef D14
+#undef D15
 static const uint8_t D0 = PIN_D0;
 static const uint8_t D1 = PIN_D1;
 static const uint8_t D2 = PIN_D2;
@@ -84,6 +88,8 @@ static const uint8_t D10 = PIN_D10;
 static const uint8_t D11 = PIN_D11;
 static const uint8_t D12 = PIN_D12;
 static const uint8_t D13 = PIN_D13;
+static const uint8_t D14 = PIN_D14;
+static const uint8_t D15 = PIN_D15;
 
 // LEDs
 // ----
@@ -123,10 +129,14 @@ static const uint8_t D13 = PIN_D13;
 
 #define WIRE_HOWMANY            4
 #define WIRE_INTERFACES_COUNT   WIRE_HOWMANY
-#define WIRE_SDA_PIN            11
-#define WIRE_SCL_PIN            12
-#define WIRE1_SDA_PIN           37
-#define WIRE1_SCL_PIN           38
+// #define WIRE_SDA_PIN            11
+// #define WIRE_SCL_PIN            12
+// #define WIRE1_SDA_PIN           37
+// #define WIRE1_SCL_PIN           38
+#define WIRE_SDA_PIN           37
+#define WIRE_SCL_PIN           38
+#define WIRE1_SDA_PIN            11
+#define WIRE1_SCL_PIN            12
 #define WIRE2_SDA_PIN           39
 #define WIRE2_SCL_PIN           40
 #define WIRE3_SDA_PIN           96
