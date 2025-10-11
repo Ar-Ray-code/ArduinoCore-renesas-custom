@@ -12,14 +12,14 @@ extern "C" unsigned int PINCOUNT_fn();
 #define NUM_ANALOG_INPUTS    (8u)
 #define NUM_ANALOG_OUTPUTS   (2u)
 
-#define PIN_A0   (15u)
-#define PIN_A1   (16u)
-#define PIN_A2   (17u)
-#define PIN_A3   (18u)
-#define PIN_A4   (19u)
+#define PIN_A0   (22u)
+#define PIN_A1   (19u)
+#define PIN_A2   (18u)
+#define PIN_A3   (81u)
+#define PIN_A4   (21u)
 #define PIN_A5   (20u)
-#define PIN_A6   (21u)
-#define PIN_A7   (22u)
+// #define PIN_A6   (21u)
+// #define PIN_A7   (22u)
 
 #define DAC8_HOWMANY (0)
 #define DAC12_HOWMANY (2)
@@ -36,19 +36,25 @@ static const uint8_t A2 = PIN_A2;
 static const uint8_t A3 = PIN_A3;
 static const uint8_t A4 = PIN_A4;
 static const uint8_t A5 = PIN_A5;
-static const uint8_t A6 = PIN_A6;
-static const uint8_t A7 = PIN_A7;
+// static const uint8_t A6 = PIN_A6;
+// static const uint8_t A7 = PIN_A7;
 
 // Digital pins
 // -----------
-#define PIN_D0   (0u)
-#define PIN_D1   (1u)
-#define PIN_D2   (2u)
-#define PIN_D3   (3u)
-#define PIN_D4   (4u)
-#define PIN_D5   (5u)
-#define PIN_D6   (6u)
-#define PIN_D7   (7u)
+#define PIN_D0   (50u)
+#define PIN_D1   (49u)
+#define PIN_D2   (28u)
+#define PIN_D3   (2u)
+#define PIN_D4   (63u)
+#define PIN_D5   (64u)
+#define PIN_D6   (65u)
+#define PIN_D7   (24u)
+#define PIN_D8   (99u)
+#define PIN_D9   (66u)
+#define PIN_D10  (89u)
+#define PIN_D11  (42u)
+#define PIN_D12  (41u)
+#define PIN_D13  (9u)
 
 #undef D0
 #undef D1
@@ -58,6 +64,12 @@ static const uint8_t A7 = PIN_A7;
 #undef D5
 #undef D6
 #undef D7
+#undef D8
+#undef D9
+#undef D10
+#undef D11
+#undef D12
+#undef D13
 static const uint8_t D0 = PIN_D0;
 static const uint8_t D1 = PIN_D1;
 static const uint8_t D2 = PIN_D2;
@@ -66,6 +78,12 @@ static const uint8_t D4 = PIN_D4;
 static const uint8_t D5 = PIN_D5;
 static const uint8_t D6 = PIN_D6;
 static const uint8_t D7 = PIN_D7;
+static const uint8_t D8 = PIN_D8;
+static const uint8_t D9 = PIN_D9;
+static const uint8_t D10 = PIN_D10;
+static const uint8_t D11 = PIN_D11;
+static const uint8_t D12 = PIN_D12;
+static const uint8_t D13 = PIN_D13;
 
 // LEDs
 // ----
@@ -82,10 +100,14 @@ static const uint8_t D7 = PIN_D7;
 
 /* TODO: add CTS/RTS pins */
 #define SERIAL_HOWMANY	    5
-#define UART1_TX_PIN        14
-#define UART1_RX_PIN        13
-#define UART2_TX_PIN        49
-#define UART2_RX_PIN        50
+// #define UART1_TX_PIN        14
+// #define UART1_RX_PIN        13
+#define UART1_TX_PIN        49
+#define UART1_RX_PIN        50
+// #define UART2_TX_PIN        49
+// #define UART2_RX_PIN        50
+#define UART2_TX_PIN        14
+#define UART2_RX_PIN        13
 #define UART3_TX_PIN        53
 #define UART3_RX_PIN        54
 #define UART4_TX_PIN        57
