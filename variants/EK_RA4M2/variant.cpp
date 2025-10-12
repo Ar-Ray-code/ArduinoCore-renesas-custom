@@ -17,25 +17,19 @@
 // };
 // #define P311 P311_b
 
-// const uint16_t P204_b[] = {
-// PIN_PWM|CHANNEL_4|PWM_CHANNEL_B|GPT_ODD_CFG,
-// SCI_CHANNEL|PIN_SCK|CHANNEL_4|SCI_EVEN_CFG,
-// PIN_SCK|CHANNEL_0|LAST_ITEM_GUARD
-// };
-// #define P204 P204_b
 
-// const uint16_t P015_b[] = {
-// PIN_DAC|CHANNEL_1,
-// PIN_ANALOG|CHANNEL_13|ADC_0,
-// PIN_INTERRUPT|CHANNEL_13|LAST_ITEM_GUARD
-// };
-// #define P015 P015_b
+const uint16_t P015_b[] = {
+PIN_DAC|CHANNEL_1,
+PIN_ANALOG|CHANNEL_13|ADC_0,
+PIN_INTERRUPT|CHANNEL_13|LAST_ITEM_GUARD
+};
+#define P015 P015_b
 
-// const uint16_t P014_b[] = {
-// PIN_DAC|CHANNEL_0,
-// PIN_ANALOG|CHANNEL_12|ADC_0|LAST_ITEM_GUARD
-// };
-// #define P014 P014_b
+const uint16_t P014_b[] = {
+PIN_DAC|CHANNEL_0,
+PIN_ANALOG|CHANNEL_12|ADC_0|LAST_ITEM_GUARD
+};
+#define P014 P014_b
 
 extern "C" const PinMuxCfg_t g_pin_cfg[] = { 
 
@@ -68,7 +62,7 @@ extern "C" const PinMuxCfg_t g_pin_cfg[] = {
 
   { BSP_IO_PORT_03_PIN_03,  P303 }, /*   D22    |             */
   { BSP_IO_PORT_04_PIN_01,  P401 }, /*   D23    |             */
-  { BSP_IO_PORT_02_PIN_10,  P210 }, /*   D24    |             */
+  { BSP_IO_PORT_03_PIN_08,  P308 }, /*   D24    |             */
   { BSP_IO_PORT_04_PIN_02,  P402 }, /*   D25    |             */
   { BSP_IO_PORT_09_PIN_00,  P900 }, /*   D26    |             */
   { BSP_IO_PORT_02_PIN_04,  P204 }, /*   D27    |             */
@@ -118,8 +112,8 @@ extern "C" const PinMuxCfg_t g_pin_cfg[] = {
   { BSP_IO_PORT_09_PIN_01,  P901 }, /*   D71    |             */
   { BSP_IO_PORT_06_PIN_12,  P612 }, /*   D72    |             */
   { BSP_IO_PORT_03_PIN_12,  P312 }, /*   D73    |             */
-  { BSP_IO_PORT_03_PIN_13,  P313 }, /*   D74    |             */
-  { BSP_IO_PORT_03_PIN_14,  P314 }, /*   D75    |             */
+  { BSP_IO_PORT_03_PIN_06,  P306 }, /*   D74    |             */
+  { BSP_IO_PORT_03_PIN_07,  P307 }, /*   D75    |             */
   { BSP_IO_PORT_10_PIN_01,  PA01 }, /*   D76    |             */
   { BSP_IO_PORT_10_PIN_08,  PA08 }, /*   D77    |             */
   { BSP_IO_PORT_10_PIN_09,  PA09 }, /*   D78    |             */
@@ -150,7 +144,6 @@ extern "C" const PinMuxCfg_t g_pin_cfg[] = {
   { BSP_IO_PORT_01_PIN_04,  P104 }, /*   D103   |             */
   { BSP_IO_PORT_05_PIN_04,  P504 }, /*   D104   |             */
   { BSP_IO_PORT_09_PIN_06,  P906 }, /*   D105   |             */
-  { BSP_IO_PORT_02_PIN_11,  P211 }, /*   D106   |             */
   { BSP_IO_PORT_04_PIN_05,  P405 }, /*   D107   |             */
   { BSP_IO_PORT_04_PIN_06,  P406 }, /*   D108   |             */
   { BSP_IO_PORT_07_PIN_00,  P700 }, /*   D109   |             */
@@ -159,13 +152,7 @@ extern "C" const PinMuxCfg_t g_pin_cfg[] = {
   { BSP_IO_PORT_07_PIN_03,  P703 }, /*   D112   |             */
   { BSP_IO_PORT_07_PIN_04,  P704 }, /*   D113   |             */
   { BSP_IO_PORT_07_PIN_05,  P705 }, /*   D114   |             */
-  { BSP_IO_PORT_02_PIN_14,  P214 }, /*   D115   |             */
   { BSP_IO_PORT_03_PIN_05,  P305 }, /*   D116   |             */
-  { BSP_IO_PORT_03_PIN_06,  P306 }, /*   D117   |             */
-  { BSP_IO_PORT_03_PIN_07,  P307 }, /*   D118   |             */
-  { BSP_IO_PORT_03_PIN_08,  P308 }, /*   D119   |             */
-  { BSP_IO_PORT_02_PIN_09,  P209 }, /*   D120   |             */
-  { BSP_IO_PORT_02_PIN_08,  P208 }, /*   D121   |             */
 };
 
 extern "C" {
