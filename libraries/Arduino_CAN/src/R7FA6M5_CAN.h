@@ -17,7 +17,7 @@
 
 #include <Arduino.h>
 
-#ifdef (ARDUINO_PORTENTA_C33 || ARDUINO_EK_RA6M5)
+#if defined(ARDUINO_PORTENTA_C33) || defined(ARDUINO_EK_RA6M5)
 
 #include "api/HardwareCAN.h"
 
