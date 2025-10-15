@@ -1,4 +1,4 @@
-#ifdef ARDUINO_PORTENTA_C33
+#if defined(ARDUINO_PORTENTA_C33) || defined(ARDUINO_EK_RA6M5)
 
 #include "bsp_api.h"
 #include "hal_data.h"

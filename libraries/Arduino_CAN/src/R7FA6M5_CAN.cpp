@@ -14,7 +14,7 @@
 
 #include "R7FA6M5_CAN.h"
 
-#ifdef ARDUINO_PORTENTA_C33
+#if defined(ARDUINO_PORTENTA_C33) || defined(ARDUINO_EK_RA6M5)
 
 #include <IRQManager.h>
 

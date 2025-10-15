@@ -26,7 +26,7 @@ extern "C" {
   #include "common_data.h"
 }
 
-#if defined (ARDUINO_PORTENTA_C33)
+#if defined(ARDUINO_PORTENTA_C33) || defined(ARDUINO_EK_RA6M5)
 #define SCE_TRNG_SUPPORT 1
 static long trng()
 {
