@@ -117,7 +117,7 @@ FSP_HEADER
 #define configSUPPORT_DYNAMIC_ALLOCATION (1)
 #endif
 #ifndef configTOTAL_HEAP_SIZE
-# if defined(ARDUINO_PORTENTA_C33)
+# if defined(ARDUINO_PORTENTA_C33) || defined(ARDUINO_EK_RA6M5)
 #   define configTOTAL_HEAP_SIZE (0x8000)
 # elif (defined(ARDUINO_MINIMA) || defined(ARDUINO_UNOWIFIR4)) || defined(ARDUINO_NANO_R4)
 #   define configTOTAL_HEAP_SIZE (0x2000) /* R7FA4M1AB has 32 kByte RAM total, so we only allocate 8 kByte RAM for FreeRTOS heap. */
