@@ -10,7 +10,7 @@
 
 #pragma once
 
-#if !defined(ARDUINO_PORTENTA_C33) && !defined(ARDUINO_MINIMA) && !defined(ARDUINO_UNOWIFIR4) && !defined(ARDUINO_NANO_R4)
+#if !defined(ARDUINO_PORTENTA_C33) && !defined(ARDUINO_MINIMA) && !defined(ARDUINO_UNOWIFIR4) && !defined(ARDUINO_NANO_R4) && !defined(ARDUINO_EK_RA6M5)
 # error "FreeRTOS is currently only supported for the Portenta C33, Arduino Uno R4 Minima, Arduino Uno R4 WiF and Arduino Nano R4."
 #endif
 
